@@ -1,0 +1,188 @@
+<html>
+<head>
+	<title>S.'s Keyboard Hierchy</title>
+	<script src="./lib/mbraak-jqTree-0b4db67/docs/static/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./lib/mbraak-jqTree-0b4db67/tree.jquery.js"></script>
+	<link rel="stylesheet" href="./lib/mbraak-jqTree-0b4db67/jqtree.css"></script>
+</head>
+<body>
+	<h1>Hierarchy of Keyboards</h1>
+	<h2>Hierarchy</h2>
+	<div id="tree1"></div>
+	<p>
+	  <a href="https://mbraak.github.io/jqTree/" target="_blank">
+	    Tree widget documentation
+	  </a>
+	</p>
+	<h2>Screen Shots - Top Level Keyboards</h2>
+	<h3>Pop up Menu from “All Keyboards”</h3>
+	<p>The popup is the set of six orange keys/cells in the
+		figure.  This corresponds to the "Start" in the tree view above.
+	</p>
+	<figure>
+		<img src="./images/PopupMenuFromAllKeyboard.jpg" alt="" width="75%"/>
+		<figcaption>Popup Menu</figcaption>			
+	</figure>
+	<h3>WordQ Keyboard</h3>
+	<figure>
+		<img src="./images/WordQ.jpg" alt="" width="75%"/>
+		<figcaption>WordQ kb</figcaption>			
+	</figure>
+	<h3>Google Doc Keyboard</h3>
+	<figure>
+		<img src="./images/GoogleDoc.jpg" alt="" width="75%"/>
+		<figcaption>google doc kb</figcaption>			
+	</figure>
+	<h3>FireFox Keyboard</h3>
+	<figure>
+		<img src="./images/FireFoxInternet.jpg" alt="" width="75%"/>
+		<figcaption>FireFox internet kb</figcaption>			
+	</figure>
+	<h3>FOU Keyboard</h3>
+	<figure>
+		<img src="./images/FOU.jpg" alt="" width="75%"/>
+		<figcaption>Frequency of Use (FOU) with word prediction</figcaption>			
+	</figure>
+	<h3>Chrome Keyboard</h3>
+	<figure>
+		<img src="./images/ChromeInternet.jpg" alt="" width="75%"/>
+		<figcaption>Chrome internet kb</figcaption>			
+	</figure>
+	<script>
+	<!-- Tree widget: https://mbraak.github.io/jqTree/ -->
+		var data = [
+			{
+				name: "All Keyboards",
+				children: [
+					{
+						name: "WordQ kb",
+						children: [
+							{
+								name: "Group 1",
+								children: [
+									{ name: "1" },
+									{ name: "Back" },
+									{ name: "2" },
+									{ name: "F9" },
+									{ name: "3" },
+									{ name: "esc" },
+									{ name: "4" },
+									{ name: "bksp" },
+									{ name: "5" },
+									{ name: "file menu" }
+								]
+							},
+							{
+								name: "Alpha 1",
+								children: [
+									{ name: "sp" },
+									{ name: " ... 19 more keys ..." }
+								]
+							},
+							{
+								name: "Alpha 2"	,
+								children: [
+									{ name: "d" },
+									{ name: "... 24 more keys ..."}
+								]
+							}
+						]
+					},
+					{
+						name: "google doc kb",
+						children: [
+							{ name: "TBD" }
+						]
+					},
+					{
+						name: "FireFox internet kb",
+						children: [
+							{ name: "TBD" }
+						]
+					},
+					{
+						name: "FOU with word predict",
+						children: [
+							{
+								name: "Group 1",
+								children: [
+									{ name: "Back" },
+									{ name: "Enter" },
+									{ name: "Esc" },
+									{ name: "prediction #1" },
+									{ name: "prediction #2" },
+									{ name: "prediction #3" },
+									{ name: "prediction #4" }
+								]
+							},
+							{
+								name: "Alpha 1",
+								children: [
+									{ name: "sp" },
+									{ name: " ... 19 more keys ..." }
+								]
+							},
+							{
+							  name: "Alpha 2",
+							  children: [
+							    { name: "d" },
+							    { name: "... 24 more keys ..."}
+							  ]
+							},
+							{
+							  name: "Control Keys",
+							  children: [
+							    { name: "Up arrow" },
+							    { name: "Down arrow" },
+							    { name: "Page icon (?)" },
+							    { name: "Left arrow" },
+							    { name: "Right arrow" },
+							    { name: "Small Black Diamond" },
+							    { name: "Tab" },
+							    { name: "bksp" },
+							    { name: "Chat icon (?)" },
+							    { name: "all Keyboard" },
+							    { name: "!&?" },
+							    { name: "Read" },
+							    { name: "Ctrl" },
+							    { name: "Alt" },
+							    { name: "F++" }
+							  ]
+							},
+							{
+								name: "Bottom Row",
+								children: [
+									{ name: "Home" },
+									{ name: "Minimize" },
+									{ name: "Keyboard" },
+									{ name: "Num + Punc" },
+									{ name: "Editing" },
+									{ name: "Mouse" },
+									{ name: "Windows Control" },
+									{ name: "Quick Phrases" },
+									{ name: "Comm" },
+									{ name: "Media" }									
+								]
+							}									
+						]
+					},
+					{
+						name: "Chrome internet kb",
+						children: [
+						  { name: "TBD"}
+						]
+					},
+					{
+						name: "Go Back"
+					}
+				]
+			}
+		];
+		$(function () {
+			$('#tree1').tree({
+				data: data
+			});
+		});
+	</script>
+</body>
+</html>
