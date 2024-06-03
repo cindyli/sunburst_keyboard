@@ -859,7 +859,7 @@ const data = {
             {"name": "bksp", "value": "10"},
           ]
         }, {
-          "name": "5/AllKbs/Puctuations/read",
+          "name": "5/AllKbs/pucts/read",
           "children": [
             {"name": "5", "value": "10"},
             {"name": "All kbs", "value": "10"},

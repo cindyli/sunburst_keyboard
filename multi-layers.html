@@ -5,6 +5,8 @@
   </head>
 
   <body>
+    <h1>Multi-Layer Keyboard</h1>
+    
     <div id="sunburst-keyboard-container"></div>
     <script src="./lib/d3.v7.min.js"></script>
     <script src="keyboardData.js"></script>
@@ -128,7 +130,8 @@
           return +this.getAttribute("fill-opacity") || labelVisible(d.target);
         }).transition(t)
           .attr("fill-opacity", d => +labelVisible(d.target))
-          .attrTween("transform", d => () => labelTransform(d.current));
+          .attrTween("transform", d => () => labelTransform(d, p));
+          // .attrTween("transform", d => () => labelTransform(d.current, p));
     }
 
     function arcVisible(d) {
@@ -139,14 +142,27 @@
       return d.y1 <= currentDepth + numOfExpandedDepth + 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.03;
     }
 
-    function labelTransform(d) {
-      if (d.depth === 0) {
+    function labelTransform(d, clickedArc) {
+      const dCurrent = d.current;
+      if (dCurrent.depth === 0) {
         return 0;
       }
 
-      const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
-      const y = (d.y0 + d.y1) / 2 * radius;
-      return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
+      // Check if the current arc is a parent of the clicked arc
+      const isParent = clickedArc && clickedArc.ancestors().includes(d);
+
+      if (isParent) {
+        // When the arc is a parent of the clicked arc, place its label
+        // horizontally at the top of the arc.
+        const y = (dCurrent.y0 + dCurrent.y1) / 2 * radius;
+        return `translate(0, -${y})`;
+      } else {
+        // For non-parent arcs, transform the label along with the arc's
+        // new target location
+        const x = (dCurrent.x0 + dCurrent.x1) / 2 * 180 / Math.PI;
+        const y = (dCurrent.y0 + dCurrent.y1) / 2 * radius;
+        return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
+      }
     }
 
     // Append the SVG element.
