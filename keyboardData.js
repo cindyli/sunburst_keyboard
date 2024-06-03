@@ -5,31 +5,31 @@ const data = {
     "children": [{
       "name": "Quick Keys",
       "children": [{
-          "name": "1, Back",
+          "name": "1/Back",
           "children": [
             {"name": "1", "value": "10"},
             {"name": "Back", "value": "10"},
           ]
         }, {
-          "name": "2, F9",
+          "name": "2/F9",
           "children": [
             {"name": "2", "value": "10"},
             {"name": "F9", "value": "10"},
           ]
         }, {
-          "name": "3, esc",
+          "name": "3/esc",
           "children": [
             {"name": "3", "value": "10"},
             {"name": "esc", "value": "10"},
           ]
         }, {
-          "name": "4, bksp",
+          "name": "4/bksp",
           "children": [
             {"name": "4", "value": "10"},
             {"name": "bksp", "value": "10"},
           ]
         }, {
-          "name": "5, file menu",
+          "name": "5/menu",
           "children": [
             {"name": "5", "value": "10"},
             {"name": "file menu", "value": "10"},
@@ -46,7 +46,7 @@ const data = {
             {"name": "r", "value": "10"},
           ]
         }, {
-          "name": "t, o, n, l",
+          "name": "t/o/n/l",
           "children": [
             {"name": "t", "value": "10"},
             {"name": "o", "value": "10"},
@@ -54,7 +54,7 @@ const data = {
             {"name": "l", "value": "10"},
           ]
         }, {
-          "name": "i, s, u, y",
+          "name": "i/s/u/y",
           "children": [
             {"name": "i", "value": "10"},
             {"name": "s", "value": "10"},
@@ -62,7 +62,7 @@ const data = {
             {"name": "y", "value": "10"},
           ]
         }, {
-          "name": "h, c, p, z",
+          "name": "h/c/p/z",
           "children": [
             {"name": "h", "value": "10"},
             {"name": "c", "value": "10"},
@@ -70,7 +70,7 @@ const data = {
             {"name": "z", "value": "10"},
           ]
         }, {
-          "name": "m, q, w, CAP",
+          "name": "m/q/w/CAP",
           "children": [
             {"name": "m", "value": "10"},
             {"name": "q", "value": "10"},
@@ -81,7 +81,7 @@ const data = {
       }, {
         "name": "Letters(2)",
         "children": [{
-          "name": "d, f, v, j",
+          "name": "d/f/v/j",
           "children": [
             {"name": "d", "value": "10"},
             {"name": "f", "value": "10"},
@@ -89,7 +89,7 @@ const data = {
             {"name": "j", "value": "10"},
           ]
         }, {
-          "name": "g, b, k, x",
+          "name": "g/b/k/x",
           "children": [
             {"name": "g", "value": "10"},
             {"name": "b", "value": "10"},
@@ -105,7 +105,7 @@ const data = {
             {"name": "!", "value": "10"},
           ]
         }, {
-          "name": "1, 2, 3, 4",
+          "name": "1/2/3/4",
           "children": [
             {"name": "1", "value": "10"},
             {"name": "2", "value": "10"},
@@ -113,7 +113,7 @@ const data = {
             {"name": "4", "value": "10"},
           ]
         }, {
-          "name": "6, 7, 8, 9",
+          "name": "6/7/8/9",
           "children": [
             {"name": "6", "value": "10"},
             {"name": "7", "value": "10"},
@@ -177,7 +177,7 @@ const data = {
       }, {
         "name": "Letters(1)",
         "children": [{
-          "name": "sp, e, a, r",
+          "name": "sp/e/a/r",
           "children": [
             {"name": "sp", "value": "10"},
             {"name": "e", "value": "10"},
@@ -185,7 +185,7 @@ const data = {
             {"name": "r", "value": "10"},
           ]
         }, {
-          "name": "t, o, n, l",
+          "name": "t/o/n/l",
           "children": [
             {"name": "t", "value": "10"},
             {"name": "o", "value": "10"},
@@ -193,7 +193,7 @@ const data = {
             {"name": "l", "value": "10"},
           ]
         }, {
-          "name": "i, s, u, y",
+          "name": "i/s/u/y",
           "children": [
             {"name": "i", "value": "10"},
             {"name": "s", "value": "10"},
@@ -201,7 +201,7 @@ const data = {
             {"name": "y", "value": "10"},
           ]
         }, {
-          "name": "h, c, p, z",
+          "name": "h/c/p/z",
           "children": [
             {"name": "h", "value": "10"},
             {"name": "c", "value": "10"},
@@ -209,7 +209,7 @@ const data = {
             {"name": "z", "value": "10"},
           ]
         }, {
-          "name": "m, q, w, CAP",
+          "name": "m/q/w/CAP",
           "children": [
             {"name": "m", "value": "10"},
             {"name": "q", "value": "10"},
@@ -220,7 +220,7 @@ const data = {
       }, {
         "name": "Letters(2)",
         "children": [{
-          "name": "d, f, v, j",
+          "name": "d/f/v/j",
           "children": [
             {"name": "d", "value": "10"},
             {"name": "f", "value": "10"},
@@ -228,7 +228,7 @@ const data = {
             {"name": "j", "value": "10"},
           ]
         }, {
-          "name": "g, b, k, x",
+          "name": "g/b/k/x",
           "children": [
             {"name": "g", "value": "10"},
             {"name": "b", "value": "10"},
@@ -244,7 +244,7 @@ const data = {
             {"name": "!", "value": "10"},
           ]
         }, {
-          "name": "1, 2, 3, 4",
+          "name": "1/2/3/4",
           "children": [
             {"name": "1", "value": "10"},
             {"name": "2", "value": "10"},
@@ -252,7 +252,7 @@ const data = {
             {"name": "4", "value": "10"},
           ]
         }, {
-          "name": "6, 7, 8, 9",
+          "name": "6/7/8/9",
           "children": [
             {"name": "6", "value": "10"},
             {"name": "7", "value": "10"},
@@ -263,7 +263,7 @@ const data = {
       }, {
         "name": "Func Keys",
         "children": [{
-          "name": "Esc/Up/Down/New",
+          "name": "esc/up/down/new",
           "children": [
             {"name": "Esc", "value": "10"},
             {"name": "Up", "value": "10"},
@@ -271,14 +271,14 @@ const data = {
             {"name": "Open blank", "value": "10"},
           ]
         }, {
-          "name": "BKSP/Left/Right",
+          "name": "bksp/left/right",
           "children": [
             {"name": "BKSP", "value": "10"},
             {"name": "Left", "value": "10"},
             {"name": "Right", "value": "10"},
           ]
         }, {
-          "name": "'/Save/print'",
+          "name": "'/save/print",
           "children": [
             {"name": "'", "value": "10"},
             {"name": "Save", "value": "10"},
@@ -292,7 +292,7 @@ const data = {
             {"name": "paste", "value": "10"},
           ]
         }, {
-          "name": "0/Bold/italic",
+          "name": "0/bold/italic",
           "children": [
             {"name": "0", "value": "10"},
             {"name": "Bold", "value": "10"},
@@ -306,31 +306,31 @@ const data = {
     "children": [{
       "name": "Quick Keys",
       "children": [{
-          "name": "1, Back",
+          "name": "1/Back",
           "children": [
             {"name": "1", "value": "10"},
             {"name": "Back", "value": "10"},
           ]
         }, {
-          "name": "2, F9",
+          "name": "2/F9",
           "children": [
             {"name": "2", "value": "10"},
             {"name": "F9", "value": "10"},
           ]
         }, {
-          "name": "3, esc",
+          "name": "3/esc",
           "children": [
             {"name": "3", "value": "10"},
             {"name": "esc", "value": "10"},
           ]
         }, {
-          "name": "4, bksp",
+          "name": "4/bksp",
           "children": [
             {"name": "4", "value": "10"},
             {"name": "bksp", "value": "10"},
           ]
         }, {
-          "name": "5, file menu",
+          "name": "5/menu",
           "children": [
             {"name": "5", "value": "10"},
             {"name": "file menu", "value": "10"},
@@ -339,7 +339,7 @@ const data = {
       }, {
         "name": "Letters(1)",
         "children": [{
-          "name": "sp, e, a, r",
+          "name": "sp/e/a/r",
           "children": [
             {"name": "sp", "value": "10"},
             {"name": "e", "value": "10"},
@@ -347,7 +347,7 @@ const data = {
             {"name": "r", "value": "10"},
           ]
         }, {
-          "name": "t, o, n, l",
+          "name": "t/o/n/l",
           "children": [
             {"name": "t", "value": "10"},
             {"name": "o", "value": "10"},
@@ -355,7 +355,7 @@ const data = {
             {"name": "l", "value": "10"},
           ]
         }, {
-          "name": "i, s, u, y",
+          "name": "i/s/u/y",
           "children": [
             {"name": "i", "value": "10"},
             {"name": "s", "value": "10"},
@@ -363,7 +363,7 @@ const data = {
             {"name": "y", "value": "10"},
           ]
         }, {
-          "name": "h, c, p, z",
+          "name": "h/c/p/z",
           "children": [
             {"name": "h", "value": "10"},
             {"name": "c", "value": "10"},
@@ -371,7 +371,7 @@ const data = {
             {"name": "z", "value": "10"},
           ]
         }, {
-          "name": "m, q, w, CAP",
+          "name": "m/q/w/CAP",
           "children": [
             {"name": "m", "value": "10"},
             {"name": "q", "value": "10"},
@@ -382,7 +382,7 @@ const data = {
       }, {
         "name": "Letters(2)",
         "children": [{
-          "name": "d, f, v, j",
+          "name": "d/f/v/j",
           "children": [
             {"name": "d", "value": "10"},
             {"name": "f", "value": "10"},
@@ -390,7 +390,7 @@ const data = {
             {"name": "j", "value": "10"},
           ]
         }, {
-          "name": "g, b, k, x",
+          "name": "g/b/k/x",
           "children": [
             {"name": "g", "value": "10"},
             {"name": "b", "value": "10"},
@@ -406,7 +406,7 @@ const data = {
             {"name": "'", "value": "10"},
           ]
         }, {
-          "name": "1, 2, 3, 4",
+          "name": "1/2/3/4",
           "children": [
             {"name": "1", "value": "10"},
             {"name": "2", "value": "10"},
@@ -414,7 +414,7 @@ const data = {
             {"name": "4", "value": "10"},
           ]
         }, {
-          "name": "6, 7, 8, 9",
+          "name": "6/7/8/9",
           "children": [
             {"name": "6", "value": "10"},
             {"name": "7", "value": "10"},
@@ -425,7 +425,7 @@ const data = {
       }, {
         "name": "Func Keys",
         "children": [{
-          "name": "Enter/Up/Down/Fav",
+          "name": "enter/up/down/fav",
           "children": [
             {"name": "Enter", "value": "10"},
             {"name": "Up", "value": "10"},
@@ -433,7 +433,7 @@ const data = {
             {"name": "Fav", "value": "10"},
           ]
         }, {
-          "name": "?/Left/Right/Help",
+          "name": "?/left/right/help",
           "children": [
             {"name": "?", "value": "10"},
             {"name": "Left", "value": "10"},
@@ -441,7 +441,7 @@ const data = {
             {"name": "Help", "value": "10"},
           ]
         }, {
-          "name": "\"/Tab/bksp/Read",
+          "name": "\"/tab/bksp/Read",
           "children": [
             {"name": "\"", "value": "10"},
             {"name": "Tab", "value": "10"},
@@ -449,7 +449,7 @@ const data = {
             {"name": "Read", "value": "10"},
           ]
         }, {
-          "name": "5/esc/From Sam/F++",
+          "name": "5/esc/Sam/F++",
           "children": [
             {"name": "5", "value": "10"},
             {"name": "esc", "value": "10"},
@@ -457,7 +457,7 @@ const data = {
             {"name": "F++", "value": "10"},
           ]
         }, {
-          "name": "0/Ctrl/Alt",
+          "name": "0/ctrl/alt",
           "children": [
             {"name": "0", "value": "10"},
             {"name": "Ctrl", "value": "10"},
@@ -467,13 +467,13 @@ const data = {
       }, {
         "name": "shortcuts",
         "children": [{
-          "name": "Page Up/Page Down",
+          "name": "PgUp/PgDown",
           "children": [
             {"name": "Page Up", "value": "10"},
             {"name": "Page Down", "value": "10"},
           ]
         }, {
-          "name": "Back/Clear/Search",
+          "name": "bk/clr/search",
           "children": [
             {"name": "Back", "value": "10"},
             {"name": "Clear", "value": "10"},
@@ -495,7 +495,7 @@ const data = {
             {"name": "Aa-", "value": "10"},
           ]
         }, {
-          "name": "3/8/Left/Right",
+          "name": "3/8/left/right",
           "children": [
             {"name": "3", "value": "10"},
             {"name": "8", "value": "10"},
@@ -503,7 +503,7 @@ const data = {
             {"name": "Right", "value": "10"},
           ]
         }, {
-          "name": "4/9/Dock/http",
+          "name": "4/9/dock/http",
           "children": [
             {"name": "4", "value": "10"},
             {"name": "9", "value": "10"},
@@ -526,7 +526,7 @@ const data = {
     "children": [{
       "name": "Quick Keys",
       "children": [{
-          "name": "1/Back",
+          "name": "1/back",
           "children": [
             {"name": "1", "value": "10"},
             {"name": "Back", "value": "10"},
@@ -538,7 +538,7 @@ const data = {
             {"name": "FAV", "value": "10"},
           ]
         }, {
-          "name": "3/Tab",
+          "name": "3/tab",
           "children": [
             {"name": "3", "value": "10"},
             {"name": "Tab", "value": "10"},
@@ -550,7 +550,7 @@ const data = {
             {"name": "esp", "value": "10"},
           ]
         }, {
-          "name": "5/file menu",
+          "name": "5/menu",
           "children": [
             {"name": "5", "value": "10"},
             {"name": "file menu", "value": "10"},
@@ -559,7 +559,7 @@ const data = {
       }, {
         "name": "Letters(1)",
         "children": [{
-          "name": "sp, e, a, r",
+          "name": "sp/e/a/r",
           "children": [
             {"name": "sp", "value": "10"},
             {"name": "e", "value": "10"},
@@ -567,7 +567,7 @@ const data = {
             {"name": "r", "value": "10"},
           ]
         }, {
-          "name": "t, o, n, l",
+          "name": "t/o/n/l",
           "children": [
             {"name": "t", "value": "10"},
             {"name": "o", "value": "10"},
@@ -575,7 +575,7 @@ const data = {
             {"name": "l", "value": "10"},
           ]
         }, {
-          "name": "i, s, u, y",
+          "name": "i/s/u/y",
           "children": [
             {"name": "i", "value": "10"},
             {"name": "s", "value": "10"},
@@ -583,7 +583,7 @@ const data = {
             {"name": "y", "value": "10"},
           ]
         }, {
-          "name": "h, c, p, z",
+          "name": "h/c/p/z",
           "children": [
             {"name": "h", "value": "10"},
             {"name": "c", "value": "10"},
@@ -591,7 +591,7 @@ const data = {
             {"name": "z", "value": "10"},
           ]
         }, {
-          "name": "m, q, w, CAP",
+          "name": "m/q/w/CAP",
           "children": [
             {"name": "m", "value": "10"},
             {"name": "q", "value": "10"},
@@ -602,7 +602,7 @@ const data = {
       }, {
         "name": "Letters(2)",
         "children": [{
-          "name": "d, f, v, j",
+          "name": "d/f/v/j",
           "children": [
             {"name": "d", "value": "10"},
             {"name": "f", "value": "10"},
@@ -610,7 +610,7 @@ const data = {
             {"name": "j", "value": "10"},
           ]
         }, {
-          "name": "g, b, k, x",
+          "name": "g/b/k/x",
           "children": [
             {"name": "g", "value": "10"},
             {"name": "b", "value": "10"},
@@ -626,7 +626,7 @@ const data = {
             {"name": "'", "value": "10"},
           ]
         }, {
-          "name": "1, 2, 3, 4",
+          "name": "1/2/3/4",
           "children": [
             {"name": "1", "value": "10"},
             {"name": "2", "value": "10"},
@@ -634,7 +634,7 @@ const data = {
             {"name": "4", "value": "10"},
           ]
         }, {
-          "name": "6, 7, 8, 9",
+          "name": "6/7/8/9",
           "children": [
             {"name": "6", "value": "10"},
             {"name": "7", "value": "10"},
@@ -645,7 +645,7 @@ const data = {
       }, {
         "name": "Func Keys",
         "children": [{
-          "name": "Enter/Up/Down/Search",
+          "name": "enter/up/down/search",
           "children": [
             {"name": "Enter", "value": "10"},
             {"name": "Up", "value": "10"},
@@ -653,7 +653,7 @@ const data = {
             {"name": "Search", "value": "10"},
           ]
         }, {
-          "name": "?/Left/Right/Help",
+          "name": "?/left/right/help",
           "children": [
             {"name": "?", "value": "10"},
             {"name": "Left", "value": "10"},
@@ -661,7 +661,7 @@ const data = {
             {"name": "Help", "value": "10"},
           ]
         }, {
-          "name": "\"/Pg Up/Pg Down/bksp",
+          "name": "\"/PgUp/PgDown/bksp",
           "children": [
             {"name": "\"", "value": "10"},
             {"name": "Pg Up", "value": "10"},
@@ -669,7 +669,7 @@ const data = {
             {"name": "bksp", "value": "10"},
           ]
         }, {
-          "name": "5/Left click/Right click/Ctrl",
+          "name": "5/LeftClick/RightClick/ctrl",
           "children": [
             {"name": "5", "value": "10"},
             {"name": "Left click", "value": "10"},
@@ -677,7 +677,7 @@ const data = {
             {"name": "Ctrl", "value": "10"},
           ]
         }, {
-          "name": "0/Dbl left click/Speak/Alt",
+          "name": "0/DblLeft/speak/Alt",
           "children": [
             {"name": "0", "value": "10"},
             {"name": "Dbl left click", "value": "10"},
@@ -688,14 +688,14 @@ const data = {
       }, {
         "name": "shortcuts",
         "children": [{
-          "name": "Link/Link in new tab/Read",
+          "name": "Link/LkNewTab/Read",
           "children": [
             {"name": "Link", "value": "10"},
             {"name": "Link in new tab", "value": "10"},
             {"name": "Read", "value": "10"},
           ]
         }, {
-          "name": "Go back/Go forward/arrow keys/arrow drag",
+          "name": "back/forward/arrows/arrowDrag",
           "children": [
             {"name": "Go back", "value": "10"},
             {"name": "Go forward", "value": "10"},
@@ -703,14 +703,14 @@ const data = {
             {"name": "arrow drag", "value": "10"},
           ]
         }, {
-          "name": "open new tab/close tab/F7",
+          "name": "NewTab/close/F7",
           "children": [
             {"name": "open new tab", "value": "10"},
             {"name": "close tab", "value": "10"},
             {"name": "F7", "value": "10"},
           ]
         }, {
-          "name": "Go tab right/Go tab left/scroll down/windows control",
+          "name": "TabRight/TabLeft/ScrollDown/ctrl",
           "children": [
             {"name": "Go tab right", "value": "10"},
             {"name": "Go tab left", "value": "10"},
@@ -718,7 +718,7 @@ const data = {
             {"name": "windows control", "value": "10"},
           ]
         }, {
-          "name": "Dock/Dock V/scroll up",
+          "name": "Dock/Dock V/ScrollUp",
           "children": [
             {"name": "Dock", "value": "10"},
             {"name": "Dock V", "value": "10"},
@@ -751,7 +751,7 @@ const data = {
       }, {
         "name": "Letters(1)",
         "children": [{
-          "name": "sp, e, a, r",
+          "name": "sp/e/a/r",
           "children": [
             {"name": "sp", "value": "10"},
             {"name": "e", "value": "10"},
@@ -759,7 +759,7 @@ const data = {
             {"name": "r", "value": "10"},
           ]
         }, {
-          "name": "t, o, n, l",
+          "name": "t/o/n/l",
           "children": [
             {"name": "t", "value": "10"},
             {"name": "o", "value": "10"},
@@ -767,7 +767,7 @@ const data = {
             {"name": "l", "value": "10"},
           ]
         }, {
-          "name": "i, s, u, y",
+          "name": "i/s/u/y",
           "children": [
             {"name": "i", "value": "10"},
             {"name": "s", "value": "10"},
@@ -775,7 +775,7 @@ const data = {
             {"name": "y", "value": "10"},
           ]
         }, {
-          "name": "h, c, p, z",
+          "name": "h/c/p/z",
           "children": [
             {"name": "h", "value": "10"},
             {"name": "c", "value": "10"},
@@ -783,7 +783,7 @@ const data = {
             {"name": "z", "value": "10"},
           ]
         }, {
-          "name": "m, q, w, CAP",
+          "name": "m/q/w/CAP",
           "children": [
             {"name": "m", "value": "10"},
             {"name": "q", "value": "10"},
@@ -794,7 +794,7 @@ const data = {
       }, {
         "name": "Letters(2)",
         "children": [{
-          "name": "d, f, v, j",
+          "name": "d/f/v/j",
           "children": [
             {"name": "d", "value": "10"},
             {"name": "f", "value": "10"},
@@ -802,7 +802,7 @@ const data = {
             {"name": "j", "value": "10"},
           ]
         }, {
-          "name": "g, b, k, x",
+          "name": "g/b/k/x",
           "children": [
             {"name": "g", "value": "10"},
             {"name": "b", "value": "10"},
@@ -818,7 +818,7 @@ const data = {
             {"name": "!", "value": "10"},
           ]
         }, {
-          "name": "1, 2, 3, 4",
+          "name": "1/2/3/4",
           "children": [
             {"name": "1", "value": "10"},
             {"name": "2", "value": "10"},
@@ -826,7 +826,7 @@ const data = {
             {"name": "4", "value": "10"},
           ]
         }, {
-          "name": "6, 7, 8, 9",
+          "name": "6/7/8/9",
           "children": [
             {"name": "6", "value": "10"},
             {"name": "7", "value": "10"},
@@ -852,14 +852,14 @@ const data = {
             {"name": "Right", "value": "10"},
           ]
         }, {
-          "name": "'/Tab/bksp'",
+          "name": "'/Tab/bksp",
           "children": [
             {"name": "'", "value": "10"},
             {"name": "Tab", "value": "10"},
             {"name": "bksp", "value": "10"},
           ]
         }, {
-          "name": "5/All kbs/Puctuations/Read",
+          "name": "5/AllKbs/Puctuations/read",
           "children": [
             {"name": "5", "value": "10"},
             {"name": "All kbs", "value": "10"},
@@ -867,7 +867,7 @@ const data = {
             {"name": "Read", "value": "10"},
           ]
         }, {
-          "name": "0/Ctrl/Alt/F++",
+          "name": "0/ctrl/alt/F++",
           "children": [
             {"name": "0", "value": "10"},
             {"name": "Ctrl", "value": "10"},
