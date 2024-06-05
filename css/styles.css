@@ -1,4 +1,21 @@
+#full-container {
+  display: grid;
+  grid-template-columns: 30% 80%;
+}
+
 #sunburst-keyboard-container {
-  margin: 0 auto;
+  margin: 1rem 0 0 4rem;
   width: 750px;
+}
+
+.focus {
+  stroke: black;
+  stroke-width: 3px;
+  filter: brightness(1.2) contrast(1.5);
+}
+
+svg path:hover {
+  stroke: black;
+  stroke-width: 1px;
+  fill-opacity: 0.8;
 }

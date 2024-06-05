@@ -2,13 +2,37 @@
 <html>
   <head>
     <title>Multi-Layer Keyboard</title>
-    <link rel="stylesheet" href="./css/styles.css"></script>
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
 
   <body>
-    <h1>Multi-Layer Keyboard</h1>
+    <div id="full-container">
+      <div id="notes">
+        <h1>Multi-Layer Keyboard</h1>
+        <h2>How to Use</h2>
+        <p>
+          <strong>Mouse Interaction:</strong> Click an arc element to expand and view two more levels 
+          of that element. If the clicked element is a leaf (has no children), its label will be appended to 
+          the "Input Text" area.
+        </p>
+        <p>
+          <strong>Keyboard Interaction:</strong>
+          <ul>
+            <li>Press <strong>"j"</strong> to cycle through the rings from inner to outer.</li>
+            <li>Press <strong>"k"</strong> to cycle through the arcs within the current ring.</li>
+            <li>Press <strong>"Enter"</strong> to confirm the selection of an arc element, similar to a mouse click.</li>
+          </ul>
+        </p>
 
-    <div id="sunburst-keyboard-container"></div>
+        <h2>Input Text</h2>
+        <textarea id="input-area" rows="10" cols="50" readonly></textarea>
+        <br><br>
+        <button id="clear-input-area">Clear</button>
+      </div>
+      
+      <div id="sunburst-keyboard-container"></div>
+    </div>
+
     <script src="./lib/d3.v7.min.js"></script>
     <script src="keyboardData.js"></script>
     <!-- <script src="data.js"></script> -->
@@ -58,7 +82,7 @@
         .attr("width", width)
         .attr("height", height);
 
-    // Append the arcs.
+    // Append the arcs
     const path = svg.append("g")
       .selectAll("path")
       .data(root.descendants())
@@ -68,9 +92,8 @@
         .attr("pointer-events", d => arcVisible(d.current) ? "auto" : "none")
         .attr("d", d => arc(d.current));
 
-    // Make them clickable if they have children.
-    path.filter(d => d.children)
-        .style("cursor", "pointer")
+    // Make arcs clickable if they have children.
+    path.style("cursor", "pointer")
         .on("click", clicked);
 
     const format = d3.format(",d");
@@ -89,8 +112,33 @@
         .attr("transform", d => labelTransform(d.current))
         .text(d => d.data.name);
 
+    let focusNode = root; // Initially focus on the root node
+
+    // Focus on a given node
+    function setFocus(node) {
+      d3.selectAll("path").classed("focus", false);
+      if (node) {
+        d3.selectAll("path")
+          .filter(d => d === node)
+          .classed("focus", true);
+      }
+      focusNode = node;
+    }
+
+    function appendText(text) {
+      const inputArea = document.getElementById("input-area");
+      inputArea.value += text + " ";  // Append new content with a newline
+    }
+
     // Handle zoom on click.
     function clicked(event, p) {
+      // For leaf elements, append its data.name to the input area;
+      // For non-leaf elements, zoom in.
+      if (!p.children) {
+        appendText(p.data.name);
+        return;
+      }
+
       currentDepth = p.depth;
       radius = calculateRadius(currentDepth);
 
@@ -132,7 +180,6 @@
         }).transition(t)
           .attr("fill-opacity", d => +labelVisible(d.target))
           .attrTween("transform", d => () => labelTransform(d, p));
-          // .attrTween("transform", d => () => labelTransform(d.current, p));
     }
 
     function arcVisible(d) {
@@ -166,8 +213,46 @@
       }
     }
 
+    // Keyboard interaction
+    document.addEventListener("keydown", function(event) {
+      if (!focusNode) return;
+
+      switch(event.key) {
+        // Simulate the click event
+        case "Enter":
+          if (focusNode.children) {
+            clicked(null, focusNode);
+            setFocus(focusNode.children[0]);
+          } else {
+            appendText(focusNode.data.name);
+          }
+          break;
+        case "j":
+          // Cycle through all visible rings in a direction from inner to outer
+          setFocus(
+            focusNode.children && focusNode.children[0].depth <= currentDepth + numOfExpandedDepth ? 
+            focusNode.children[0] : root
+          );
+          break;
+        case "k":
+          // Cycle through all arc elements within a ring
+          if (focusNode.parent) {
+            const siblings = focusNode.parent.children;
+            const index = siblings.indexOf(focusNode);
+            setFocus(siblings[index < siblings.length - 1 ? index + 1 : 0])
+          }
+          break;
+      }
+    });
+
+    // Add listner for the "clear" button
+    document.getElementById("clear-input-area").addEventListener("click", function() {
+      document.getElementById("input-area").value = "";
+    });
+
     // Append the SVG element.
     document.getElementById("sunburst-keyboard-container").append(svg.node());
+    setFocus(root); // Initial focus on the root
 
     </script>
   </body>
