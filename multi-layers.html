@@ -132,6 +132,8 @@
 
     // Handle zoom on click.
     function clicked(event, p) {
+      setFocus(p);
+
       // For leaf elements, append its data.name to the input area;
       // For non-leaf elements, zoom in.
       if (!p.children) {
