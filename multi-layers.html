@@ -35,7 +35,6 @@
 
     <script src="./lib/d3.v7.min.js"></script>
     <script src="keyboardData.js"></script>
-    <!-- <script src="data.js"></script> -->
     <script type="module">
 
     const width = 750;
@@ -113,6 +112,7 @@
         .text(d => d.data.name);
 
     let focusNode = root; // Initially focus on the root node
+    let currentClickedNode = root; // The last clicked node that has children. Its parents are visible arc nodes.
 
     // Focus on a given node
     function setFocus(node) {
@@ -141,6 +141,7 @@
         return;
       }
 
+      currentClickedNode = p;  // Only keep track of the last clicked node that has children
       currentDepth = p.depth;
       radius = calculateRadius(currentDepth);
 
@@ -215,6 +216,16 @@
       }
     }
 
+    function findParentAtDepth(node, targetDepth) {
+      while (node) {
+        if (node.depth === targetDepth) {
+          return node;
+        }
+        node = node.parent;
+      }
+      return root; // Return root if no parent with the target depth is found
+    }
+
     // Keyboard interaction
     document.addEventListener("keydown", function(event) {
       if (!focusNode) return;
@@ -231,10 +242,29 @@
           break;
         case "j":
           // Cycle through all visible rings in a direction from inner to outer
-          setFocus(
-            focusNode.children && focusNode.children[0].depth <= currentDepth + numOfExpandedDepth ? 
-            focusNode.children[0] : root
-          );
+          // Conditions in this section is to make sure the next focus node is
+          // on a visible arc node. This is because When a node with children is
+          // clicked and expanded, its sibling nodes and their children become
+          // invisible.
+          if (focusNode.depth + 1 === currentDepth) {
+            // Next focus node is the last clicked node
+            setFocus(currentClickedNode);
+          } else if (focusNode.depth + 1 > currentDepth) {
+            // Next focus node is on a ring that outside of the last clicked node
+            setFocus(
+              focusNode.children && 
+              (focusNode.children[0].depth <= currentDepth + numOfExpandedDepth && 
+              currentDepth + numOfExpandedDepth <= maxDepth || 
+              focusNode.depth + 1 === maxDepth) ? 
+              focusNode.children[0] : root
+            );
+          } else if (focusNode.depth + 1 > maxDepth) {
+            // already at the outer most ring
+            setFocus(root);
+          } else {
+            // need to focus on a parent of the clicked node
+            setFocus(findParentAtDepth(currentClickedNode, focusNode.depth + 1));
+          }
           break;
         case "k":
           // Cycle through all arc elements within a ring
