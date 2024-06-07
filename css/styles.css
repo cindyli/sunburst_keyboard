@@ -14,7 +14,8 @@
   filter: brightness(1.2) contrast(1.5);
 }
 
-svg path:hover {
+svg path:hover,
+svg circle:hover {
   stroke: black;
   stroke-width: 1px;
   fill-opacity: 0.8;
