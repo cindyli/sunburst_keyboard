@@ -11,9 +11,12 @@
         <h1>Multi-Layer Keyboard</h1>
         <h2>How to Use</h2>
         <p>
-          <strong>Mouse Interaction:</strong> Click an arc element to expand and view two more levels 
-          of that element. If the clicked element is a leaf (has no children), its label will be appended to 
-          the "Input Text" area.
+          <strong>Mouse Interaction:</strong> Clicking an arc element expands it to reveal two additional levels.
+          <ul>
+            <li>If the selected element has child elements, focus automatically shifts to its first child.</li>
+            <li>If the selected element is a leaf (has no children), its label is added to the "Input Text" area,
+              and focus moves to the "Quick Keys" group on this keyboard.</li>
+          </ul>
         </p>
         <p>
           <strong>Keyboard Interaction:</strong>
@@ -130,16 +133,48 @@
       inputArea.value += text + " ";  // Append new content with a newline
     }
 
-    // Handle zoom on click.
-    function clicked(event, p) {
-      setFocus(p);
+    // Find an ancestor with label ending with the given suffix
+    function findAncestorWithLabelEnding(node, suffix) {
+      while (node) {
+        if (node.data.name.endsWith(suffix)) {
+          return node;
+        }
+        node = node.parent;
+      }
+      return null;
+    }
 
-      // For leaf elements, append its data.name to the input area;
-      // For non-leaf elements, zoom in.
+    // Function to find child with specific label
+    function findChildWithLabel(node, label) {
+      if (!node.children) return null;
+      return node.children.find(child => child.data.name === label);
+    }
+
+    // Handle a click on any node.
+    // For leaf elements, append text then focus on the group that has predicted words. Steps:
+    // 1. append its data.name to the input area;
+    // 2. Recursively looking for the keyboard parent node whose label has suffix " kb". Click on this parent node;
+    // 3. Focus on the "Quick Keys" child of this parent.
+    //
+    // For non-leaf elements, zoom in and focus on the first child of this element.
+    function clicked(event, p) {
+      // For leaf elements
       if (!p.children) {
         appendText(p.data.name);
+
+        const ancestor = findAncestorWithLabelEnding(p, " kb");
+        if (ancestor) {
+          clicked(null, ancestor);
+          const quickKeysChild = findChildWithLabel(ancestor, "Quick Keys");
+          if (quickKeysChild) {
+            setFocus(quickKeysChild);
+          }
+        }
         return;
       }
+
+      // For non-leaf elements
+      setFocus(p.children[0]);
 
       currentClickedNode = p;  // Only keep track of the last clicked node that has children
       currentDepth = p.depth;
@@ -233,12 +268,7 @@
       switch(event.key) {
         // Simulate the click event
         case "Enter":
-          if (focusNode.children) {
-            clicked(null, focusNode);
-            setFocus(focusNode.children[0]);
-          } else {
-            appendText(focusNode.data.name);
-          }
+          clicked(null, focusNode);
           break;
         case "j":
           // Cycle through all visible rings in a direction from inner to outer
